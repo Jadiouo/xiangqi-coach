@@ -1,0 +1,25 @@
+{
+  "name": "xiangqi-coach-web",
+  "private": true,
+  "license": "MIT",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "wasm:build": "bash ../scripts/build-web-wasm.sh",
+    "predev": "npm run wasm:build",
+    "prebuild": "npm run wasm:build",
+    "build": "vite build",
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "binaryen": "132.0.0",
+    "typescript": "~5.8.3",
+    "vite": "6.4.4",
+    "vitest": "^5.0.3"
+  }
+}

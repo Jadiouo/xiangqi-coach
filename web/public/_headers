@@ -1,0 +1,25 @@
+# Cloudflare Pages response headers. Vite copies web/public/ unchanged into dist/, so this file
+# lands at the output root. Cloudflare reads it and does NOT serve it (GET /_headers is a 404);
+# GitHub Pages and the local preview just serve it as an ordinary file. The service worker
+# precache list skips it (web/src/pwa/precache.ts), otherwise install would fail on the 404.
+#
+# Compression: Cloudflare compresses text and wasm with brotli/gzip on its own. Do not pre-compress.
+# Cross-origin isolation (COOP/COEP) is deliberately NOT set; it waits for P7 (see docs/TASKS.md).
+
+# Hashed build output (assets/index-<hash>.js, workers, css): the file name changes with content.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# wasm and its glue JS are NOT hashed (wasm/xq_wasm_bg.wasm): always revalidate (ETag), never immutable.
+/wasm/*
+  Cache-Control: no-cache
+/wasm/*.wasm
+  Content-Type: application/wasm
+
+# Entry points that must always be re-checked so an update is noticed (Cloudflare redirects /index.html to /).
+/
+  Cache-Control: no-cache
+/sw.js
+  Cache-Control: no-cache
+/manifest.webmanifest
+  Cache-Control: no-cache

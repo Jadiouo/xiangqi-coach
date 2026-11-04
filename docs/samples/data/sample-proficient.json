@@ -1,0 +1,846 @@
+{
+  "finals": [
+    {
+      "bestMove": "b2b6",
+      "classification": "unclassified",
+      "lossPercent": 1.6663457689727543,
+      "reason": null
+    },
+    {
+      "bestMove": "b7b3",
+      "classification": "unclassified",
+      "lossPercent": 0.99995555845247,
+      "reason": null
+    },
+    {
+      "bestMove": "b0c2",
+      "classification": "unclassified",
+      "lossPercent": 0.9166250799904518,
+      "reason": null
+    },
+    {
+      "bestMove": "g9i7",
+      "classification": "unclassified",
+      "lossPercent": 1.3331617602422297,
+      "reason": null
+    },
+    {
+      "bestMove": "b2b6",
+      "classification": "unclassified",
+      "lossPercent": 1.9997278234097635,
+      "reason": null
+    },
+    {
+      "bestMove": "i9i8",
+      "classification": "unclassified",
+      "lossPercent": 1.2498923750045463,
+      "reason": null
+    },
+    {
+      "bestMove": "i0h0",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "h7i7",
+      "classification": "unclassified",
+      "lossPercent": 0.2499368165520821,
+      "reason": null
+    },
+    {
+      "bestMove": "g2c2",
+      "classification": "inaccuracy",
+      "lossPercent": 2.166303628276073,
+      "reason": null
+    },
+    {
+      "bestMove": "h7h4",
+      "classification": "unclassified",
+      "lossPercent": 1.6663966702938793,
+      "reason": null
+    },
+    {
+      "bestMove": "b0c2",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "h7h4",
+      "classification": "unclassified",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "b2b6",
+      "classification": "unclassified",
+      "lossPercent": 0.7499729181102532,
+      "reason": null
+    },
+    {
+      "bestMove": "g5g4",
+      "classification": "inaccuracy",
+      "lossPercent": 3.569999256305273,
+      "reason": null
+    },
+    {
+      "bestMove": "h6e6",
+      "classification": "inaccuracy",
+      "lossPercent": 3.818467767045542,
+      "reason": null
+    },
+    {
+      "bestMove": "b9c7",
+      "classification": "good",
+      "lossPercent": 0.49968347394446777,
+      "reason": null
+    },
+    {
+      "bestMove": "h6f6",
+      "classification": "inaccuracy",
+      "lossPercent": 2.999100323882009,
+      "reason": null
+    },
+    {
+      "bestMove": "g5g4",
+      "classification": "inaccuracy",
+      "lossPercent": 4.993844677762449,
+      "reason": null
+    },
+    {
+      "bestMove": "h6f6",
+      "classification": "doubtful_move",
+      "lossPercent": 6.82269834093458,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "missed_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "pawn",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "g3"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "horse",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "g3"
+            }
+          ],
+          "bestNet": 230,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "pawn",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "g3"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "i6"
+            }
+          ],
+          "playedNet": 0,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "h7h2",
+      "classification": "inaccuracy",
+      "lossPercent": 4.24708675384195,
+      "reason": null
+    },
+    {
+      "bestMove": "g6f6",
+      "classification": "good",
+      "lossPercent": 0.8327934755292032,
+      "reason": null
+    },
+    {
+      "bestMove": "f5g3",
+      "classification": "good",
+      "lossPercent": 0.9160295852270516,
+      "reason": null
+    },
+    {
+      "bestMove": "f2f9",
+      "classification": "doubtful_move",
+      "lossPercent": 7.477704009235003,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "position_type",
+        "material": null,
+        "moves": 0,
+        "position": {
+          "bestValue": 120,
+          "component": "material",
+          "mobilityAfter": 47,
+          "mobilityAfterBest": 46,
+          "mobilityBefore": 47,
+          "playedValue": 0
+        },
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g4g3",
+      "classification": "mistake",
+      "lossPercent": 15.823636619079274,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "position_type",
+        "material": null,
+        "moves": 0,
+        "position": {
+          "bestValue": 70,
+          "component": "material",
+          "mobilityAfter": 39,
+          "mobilityAfterBest": 47,
+          "mobilityBefore": 48,
+          "playedValue": 0
+        },
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "b1f1",
+      "classification": "mistake",
+      "lossPercent": 11.261317328530485,
+      "reason": null
+    },
+    {
+      "bestMove": "d6c4",
+      "classification": "doubtful_move",
+      "lossPercent": 6.311179692133412,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "position_type",
+        "material": null,
+        "moves": 0,
+        "position": {
+          "bestValue": 70,
+          "component": "material",
+          "mobilityAfter": 48,
+          "mobilityAfterBest": 45,
+          "mobilityBefore": 41,
+          "playedValue": 0
+        },
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g3g4",
+      "classification": "inaccuracy",
+      "lossPercent": 4.228183862300449,
+      "reason": null
+    },
+    {
+      "bestMove": "h5a5",
+      "classification": "unclassified",
+      "lossPercent": 1.6636232587836477,
+      "reason": null
+    },
+    {
+      "bestMove": "i2g3",
+      "classification": "unclassified",
+      "lossPercent": 0.8312343699303892,
+      "reason": null
+    },
+    {
+      "bestMove": "e7g9",
+      "classification": "blunder",
+      "lossPercent": 22.25713506380562,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [],
+          "bestNet": 0,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "g3"
+            }
+          ],
+          "playedNet": -300,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "i2g3",
+      "classification": "blunder",
+      "lossPercent": 21.50976833559328,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "missed_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "g3"
+            }
+          ],
+          "bestNet": 300,
+          "mover": "red",
+          "playedCaptures": [],
+          "playedNet": 0,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g3g5",
+      "classification": "inaccuracy",
+      "lossPercent": 3.2990355944307934,
+      "reason": null
+    },
+    {
+      "bestMove": "g0e2",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "g3h3",
+      "classification": "good",
+      "lossPercent": 0.7237773346005394,
+      "reason": null
+    },
+    {
+      "bestMove": "f2f9",
+      "classification": "inaccuracy",
+      "lossPercent": 3.6549940607552456,
+      "reason": null
+    },
+    {
+      "bestMove": "e6e5",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "f5e5",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "e8f8",
+      "classification": "unclassified",
+      "lossPercent": 1.145610694366994,
+      "reason": null
+    },
+    {
+      "bestMove": "f2f1",
+      "classification": "unclassified",
+      "lossPercent": 0.8995282756735778,
+      "reason": null
+    },
+    {
+      "bestMove": "e8f8",
+      "classification": "unclassified",
+      "lossPercent": 0.9810745463077476,
+      "reason": null
+    },
+    {
+      "bestMove": "f2f6",
+      "classification": "unclassified",
+      "lossPercent": 1.6379599677800003,
+      "reason": null
+    },
+    {
+      "bestMove": "e8f8",
+      "classification": "good",
+      "lossPercent": 0.7388437204473575,
+      "reason": null
+    },
+    {
+      "bestMove": "a1d1",
+      "classification": "good",
+      "lossPercent": 0.6566185929075985,
+      "reason": null
+    },
+    {
+      "bestMove": "e8f8",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "d1d6",
+      "classification": "unclassified",
+      "lossPercent": 1.0712487730863862,
+      "reason": null
+    },
+    {
+      "bestMove": "f8f4",
+      "classification": "mistake",
+      "lossPercent": 16.72947751678758,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "cannon",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "f4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "horse",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "d6"
+            }
+          ],
+          "bestNet": 0,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "pawn",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "a3"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "g5"
+            }
+          ],
+          "playedNet": -230,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "f4e4",
+      "classification": "unique_move",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "d6e8",
+      "classification": "mistake",
+      "lossPercent": 10.05979353577809,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "g5"
+            }
+          ],
+          "bestNet": -300,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "horse",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "d6"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "horse",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "e6"
+            }
+          ],
+          "playedNet": -600,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "d5d6",
+      "classification": "blunder",
+      "lossPercent": 20.793189129385404,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "missed_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "horse",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "d6"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "horse",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "e6"
+            }
+          ],
+          "bestNet": 600,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "g5"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "cannon",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "e4"
+            }
+          ],
+          "playedNet": 0,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "d6e4",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "g5d5",
+      "classification": "mistake",
+      "lossPercent": 16.576265935293367,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "missed_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "d9"
+            }
+          ],
+          "bestNet": 120,
+          "mover": "red",
+          "playedCaptures": [],
+          "playedNet": 0,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "f8g8",
+      "classification": "unclassified",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "g2g9",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "f9e8",
+      "classification": "unique_move",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "d1d2",
+      "classification": "unclassified",
+      "lossPercent": 0.4905488412834336,
+      "reason": null
+    },
+    {
+      "bestMove": "a3e3",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "d0e1",
+      "classification": "unclassified",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "e9f9",
+      "classification": "blunder",
+      "lossPercent": 31.25746428536439,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "missed_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 3,
+              "square": "f5"
+            }
+          ],
+          "bestNet": 600,
+          "mover": "black",
+          "playedCaptures": [],
+          "playedNet": 0,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g9i9",
+      "classification": "doubtful_move",
+      "lossPercent": 9.5288506033686,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [],
+          "bestNet": 0,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 4,
+              "square": "f5"
+            }
+          ],
+          "playedNet": -600,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "e9f9",
+      "classification": "mistake",
+      "lossPercent": 11.278573585789614,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 3,
+              "square": "f5"
+            }
+          ],
+          "bestNet": 600,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "d7"
+            }
+          ],
+          "playedNet": -120,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    }
+  ],
+  "gameLevel": 8,
+  "moves": [
+    "c3c4",
+    "g6g5",
+    "h2g2",
+    "g9e7",
+    "h0i2",
+    "h9g7",
+    "i0h0",
+    "i9h9",
+    "h0h3",
+    "g7f5",
+    "b0c2",
+    "h9h8",
+    "h3h6",
+    "b7b3",
+    "g2f2",
+    "b9c7",
+    "b2b1",
+    "g5g4",
+    "h6g6",
+    "h7h2",
+    "g6f6",
+    "f5d6",
+    "c2b4",
+    "h8e8",
+    "b1e1",
+    "h2h5",
+    "a0a1",
+    "b3g3",
+    "b4c6",
+    "g4h4",
+    "f6f5",
+    "h5g5",
+    "g0e2",
+    "g3h3",
+    "e1g1",
+    "e6e5",
+    "f5e5",
+    "h3h1",
+    "g1g2",
+    "h1h3",
+    "f2f4",
+    "a9b9",
+    "a1d1",
+    "e8f8",
+    "e5d5",
+    "h3a3",
+    "f4e4",
+    "c7e6",
+    "d5g5",
+    "d6e4",
+    "g5h5",
+    "e4c3",
+    "g2g9",
+    "f9e8",
+    "d1d6",
+    "a3e3",
+    "f0e1",
+    "f8f6",
+    "c6d8",
+    "b9b1"
+  ],
+  "opening": "CCPD-opening-00000278-ply8"
+}

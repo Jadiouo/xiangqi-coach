@@ -1,0 +1,43 @@
+{
+  "schema": "xiangqi-m5-candidate-config-v1",
+  "candidate_id": "m5-killer-history-v1",
+  "target": "KillerHistoryOrdering",
+  "baseline_flags": {
+    "RootAlpha": true,
+    "CheckExtensions": true,
+    "KillerHistoryOrdering": false,
+    "NullMove": false,
+    "LateMoveReductions": false
+  },
+  "candidate_flags": {
+    "RootAlpha": true,
+    "CheckExtensions": true,
+    "KillerHistoryOrdering": true,
+    "NullMove": false,
+    "LateMoveReductions": false
+  },
+  "common_options": {
+    "MultiPV": "1"
+  },
+  "runner": {
+    "m5_profile": "kh",
+    "strategy_a": "search",
+    "strategy_b": "search",
+    "look1": {
+      "global_round_start": 1,
+      "global_round_count": 2,
+      "games": 200
+    },
+    "nodes_per_move": 10000,
+    "seed": 1,
+    "max_ply": 4096,
+    "engine_timeout_seconds": 30,
+    "workers": 4
+  },
+  "fixed30_screen": {
+    "fixture": "crates/xq-engine/tests/fixtures/m4-tactics-v3.tsv",
+    "expected_positions": 30,
+    "nodes_per_position": 100000,
+    "modes": ["baseline", "killer"]
+  }
+}

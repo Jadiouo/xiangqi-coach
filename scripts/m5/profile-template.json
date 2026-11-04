@@ -1,0 +1,21 @@
+{
+  "schema": "xiangqi-m5-candidate-lock-v1",
+  "status": "draft",
+  "candidate_id": "<unique-candidate-id>",
+  "target": "<KillerHistoryOrdering|NullMove|LateMoveReductions>",
+  "baseline_flags": {
+    "RootAlpha": true,
+    "CheckExtensions": true,
+    "KillerHistoryOrdering": false,
+    "NullMove": false,
+    "LateMoveReductions": false
+  },
+  "common_options": {"MultiPV": "1"},
+  "candidate_flags": "<copy baseline and enable only target>",
+  "git_repo_path": "<absolute frozen candidate source path>",
+  "git_head": "<40-character clean HEAD>",
+  "config_path": "<tracked config path relative to source repo>",
+  "config_sha256": "<sha256>",
+  "binary_path": "<absolute immutable binary path>",
+  "binary_sha256": "<sha256>"
+}

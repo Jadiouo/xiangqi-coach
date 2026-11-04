@@ -1,0 +1,9 @@
+# 每行一個開局（ICCS 著法）；xq-uci spar 讓內建引擎在每個開局各執紅、黑一盤。
+h2e2 h9g7 h0g2 i9h9
+h2e2 b7e7 h0g2 b9c7
+h2e2 h9g7 h0g2 b9c7
+b2e2 h9g7 b0c2 i9h9
+g0e2 g6g5 b0c2 b9c7
+c3c4 h9g7 b0c2 i9h9
+c3c4 c6c5 h0g2 h9g7
+h2e2 h7e7 h0g2 h9g7

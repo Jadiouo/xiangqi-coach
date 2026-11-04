@@ -1,0 +1,131 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * *"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+          targets: wasm32-unknown-unknown
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: cargo install wasm-bindgen-cli --version 0.2.126 --locked
+      - run: make check
+
+  e2e:
+    # manual only: the 2-core GitHub runner cannot meet the suite's timing thresholds
+    # (difficulty 10 within 5 s, game end within 2 s); merges are verified with the full E2E on a local or larger machine
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      PLAYWRIGHT_HTML_OPEN: never
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/wasm-bindgen
+            ~/.cargo/bin/wasm-bindgen-test-runner
+            ~/.cargo/bin/wasm2es6js
+          key: wasm-bindgen-cli-0.2.126-${{ runner.os }}
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: e2e-cargo-${{ runner.os }}-${{ hashFiles('Cargo.lock') }}
+          restore-keys: e2e-cargo-${{ runner.os }}-
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install wasm-bindgen-cli 0.2.126
+        run: |
+          if [ "$(wasm-bindgen --version 2>/dev/null | awk '{print $2}')" != "0.2.126" ]; then
+            cargo install wasm-bindgen-cli --version 0.2.126 --locked --force
+          fi
+      - name: npm ci
+        working-directory: web
+        run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: ~/apt-debs
+          key: apt-debs-fonts-noto-cjk-${{ runner.os }}-v1
+      # playwright.config.ts uses channel "chrome" only. The runner image already ships Chrome and its
+      # system libraries, and `--with-deps` pulled them again over apt (2026-10-23: 28 kB/s from the
+      # mirror, 14-28 min, job timed out), so Chrome is installed only when missing and the CJK font
+      # .deb is kept in a cache.
+      - name: Install browsers
+        working-directory: web
+        run: |
+          mkdir -p ~/apt-debs
+          if ! ls ~/apt-debs/fonts-noto-cjk_*.deb >/dev/null 2>&1; then
+            (cd ~/apt-debs && apt-get download fonts-noto-cjk)
+          fi
+          sudo dpkg -i ~/apt-debs/fonts-noto-cjk_*.deb
+          if ! command -v google-chrome >/dev/null; then
+            npx playwright install --with-deps chrome
+          fi
+          google-chrome --version
+      - name: Build (wasm + vite)
+        working-directory: web
+        run: npm run build
+      - name: E2E dev
+        if: ${{ !cancelled() }}
+        working-directory: web
+        env:
+          PLAYWRIGHT_HTML_REPORT: playwright-report-dev
+        run: npx playwright test --reporter=line,html --output=test-results-dev
+      # preview serves dist under /xiangqi-coach/, so rebuild with that base (wasm already built), as the Modal run does
+      - name: Rebuild for preview (--base=/xiangqi-coach/)
+        if: ${{ !cancelled() }}
+        working-directory: web
+        run: npx vite build --base=/xiangqi-coach/
+      - name: E2E preview
+        if: ${{ !cancelled() }}
+        working-directory: web
+        env:
+          E2E_PREVIEW: "1"
+          PLAYWRIGHT_HTML_REPORT: playwright-report-preview
+        run: npx playwright test --reporter=line,html --output=test-results-preview
+      - name: Upload Playwright artifacts
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts
+          path: |
+            web/test-results*
+            web/playwright-report*
+          retention-days: 7
+          if-no-files-found: ignore
+
+  slow-check:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+      - run: make slow-check

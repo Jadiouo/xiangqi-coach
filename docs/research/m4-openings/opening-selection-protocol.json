@@ -1,0 +1,21 @@
+{
+  "schema_version": "m4-opening-selection-v1",
+  "sampling_seed_u64": 1328726801112436425,
+  "seed_source": "Python secrets.randbits(64), OS-backed entropy",
+  "population_order": "ascending position_key",
+  "sampling": "random.Random(seed).sample(eligible, 50), without replacement",
+  "python_version": "3.12.3",
+  "tool_commit_at_seed_generation": "06af90d60334eca4d65db14828b8336e3ac461d5",
+  "eligible_population_sha256": "5e5d3595f9f08ad9fc10fe791de31454e73c726501cdc0c33d2a7c31a777e86e",
+  "selected_population_sha256": "09225f85a6b906aa66baa0aa095c4b4b88f7aa420e63cded286ab92988ddbcee",
+  "selection_status": "sample generated; pending independent review",
+  "eligible_population_count": 203,
+  "eligible_population_path": "eligible-population.jsonl",
+  "selected_population_path": "selected-50.jsonl",
+  "selected_count": 50,
+  "selection_tool_commit": "414668bd8bcb5cdefbf75fedd73a06ac7c1f8ff0",
+  "runner_tsv_path": "selected-50.tsv",
+  "runner_tsv_sha256": "2052a3f47ad38b5b2d7dc72004ea21faccc62df8a3dfccb0ce0f86a2fdf4cf88",
+  "seed_timing_attestation": "Self-reported in this protocol before eligibility hash generation and sampling; not independently timestamp-attested.",
+  "review_status": "Sol reviewed scoring logs at fixed f184e93; root accepted sampling; sampled output awaits independent deterministic reproduction."
+}

@@ -1,0 +1,1868 @@
+{
+  "finals": [
+    {
+      "bestMove": "b2b6",
+      "classification": "unclassified",
+      "lossPercent": 1.6663457689727543,
+      "reason": null
+    },
+    {
+      "bestMove": "b7b3",
+      "classification": "unclassified",
+      "lossPercent": 0.99995555845247,
+      "reason": null
+    },
+    {
+      "bestMove": "b0c2",
+      "classification": "unclassified",
+      "lossPercent": 0.9166250799904518,
+      "reason": null
+    },
+    {
+      "bestMove": "g9i7",
+      "classification": "unclassified",
+      "lossPercent": 1.3331617602422297,
+      "reason": null
+    },
+    {
+      "bestMove": "b2b6",
+      "classification": "unclassified",
+      "lossPercent": 1.9997278234097635,
+      "reason": null
+    },
+    {
+      "bestMove": "i9i8",
+      "classification": "unclassified",
+      "lossPercent": 1.2498923750045463,
+      "reason": null
+    },
+    {
+      "bestMove": "i0h0",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "h7i7",
+      "classification": "unclassified",
+      "lossPercent": 0.2499368165520821,
+      "reason": null
+    },
+    {
+      "bestMove": "g2c2",
+      "classification": "unclassified",
+      "lossPercent": 0.33325711113023626,
+      "reason": null
+    },
+    {
+      "bestMove": "h7i7",
+      "classification": "inaccuracy",
+      "lossPercent": 4.812268603235909,
+      "reason": null
+    },
+    {
+      "bestMove": "b2b9",
+      "classification": "inaccuracy",
+      "lossPercent": 2.4822125647560256,
+      "reason": null
+    },
+    {
+      "bestMove": "a9b9",
+      "classification": "mistake",
+      "lossPercent": 19.99542932772596,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "cannon",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "b9"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "i6"
+            }
+          ],
+          "bestNet": 230,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "c6"
+            }
+          ],
+          "playedNet": -70,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g2b2",
+      "classification": "blunder",
+      "lossPercent": 22.90879223493065,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "c6"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "pawn",
+                "side": "red"
+              },
+              "ply": 4,
+              "square": "i3"
+            }
+          ],
+          "bestNet": 0,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "cannon",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "b9"
+            }
+          ],
+          "playedNet": -300,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "a9b9",
+      "classification": "blunder",
+      "lossPercent": 23.756162148762495,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "cannon",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "b9"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "rook",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "h9"
+            }
+          ],
+          "bestNet": -300,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "rook",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "h9"
+            }
+          ],
+          "playedNet": -600,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "b9b8",
+      "classification": "good",
+      "lossPercent": 0.4541472248767442,
+      "reason": null
+    },
+    {
+      "bestMove": "h7i7",
+      "classification": "unclassified",
+      "lossPercent": 0.7754749943296446,
+      "reason": null
+    },
+    {
+      "bestMove": "a0a1",
+      "classification": "doubtful_move",
+      "lossPercent": 5.581363915217308,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "position_type",
+        "material": null,
+        "moves": 0,
+        "position": {
+          "bestValue": 32,
+          "component": "mobility",
+          "mobilityAfter": 40,
+          "mobilityAfterBest": 51,
+          "mobilityBefore": 43,
+          "playedValue": 10
+        },
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "h7i7",
+      "classification": "inaccuracy",
+      "lossPercent": 4.148504964898575,
+      "reason": null
+    },
+    {
+      "bestMove": "a2c0",
+      "classification": "inaccuracy",
+      "lossPercent": 4.004823112703937,
+      "reason": null
+    },
+    {
+      "bestMove": "h8i8",
+      "classification": "inaccuracy",
+      "lossPercent": 4.33477365500522,
+      "reason": null
+    },
+    {
+      "bestMove": "i3i4",
+      "classification": "inaccuracy",
+      "lossPercent": 4.839208131295381,
+      "reason": null
+    },
+    {
+      "bestMove": "b7a7",
+      "classification": "mistake",
+      "lossPercent": 18.740179677245113,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "pawn",
+                "side": "red"
+              },
+              "ply": 3,
+              "square": "a3"
+            }
+          ],
+          "bestNet": 70,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "cannon",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "b9"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "rook",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "b9"
+            }
+          ],
+          "playedNet": -300,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "b2b9",
+      "classification": "unique_move",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "b7a7",
+      "classification": "unclassified",
+      "lossPercent": 1.2011484456469184,
+      "reason": null
+    },
+    {
+      "bestMove": "a0b0",
+      "classification": "unclassified",
+      "lossPercent": 0.9753445014113572,
+      "reason": null
+    },
+    {
+      "bestMove": "b7a7",
+      "classification": "unclassified",
+      "lossPercent": 0.3689553056842612,
+      "reason": null
+    },
+    {
+      "bestMove": "a0b0",
+      "classification": "inaccuracy",
+      "lossPercent": 2.9113134492743997,
+      "reason": null
+    },
+    {
+      "bestMove": "g7f5",
+      "classification": "doubtful_move",
+      "lossPercent": 9.450604787380446,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 3,
+              "square": "f2"
+            }
+          ],
+          "bestNet": 300,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "d7"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "d9"
+            }
+          ],
+          "playedNet": -240,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "d4d7",
+      "classification": "doubtful_move",
+      "lossPercent": 6.073249649124934,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "missed_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "d7"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "d9"
+            }
+          ],
+          "bestNet": 240,
+          "mover": "red",
+          "playedCaptures": [],
+          "playedNet": 0,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "f8f7",
+      "classification": "unclassified",
+      "lossPercent": 0.6204481187959923,
+      "reason": null
+    },
+    {
+      "bestMove": "a2c0",
+      "classification": "good",
+      "lossPercent": 0.03372483403932813,
+      "reason": null
+    },
+    {
+      "bestMove": "d7e8",
+      "classification": "inaccuracy",
+      "lossPercent": 3.9460895823167657,
+      "reason": null
+    },
+    {
+      "bestMove": "d4d7",
+      "classification": "inaccuracy",
+      "lossPercent": 4.322824401225311,
+      "reason": null
+    },
+    {
+      "bestMove": "f8f7",
+      "classification": "doubtful_move",
+      "lossPercent": 7.420231501120214,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [],
+          "bestNet": 0,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "b1"
+            }
+          ],
+          "playedNet": -300,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "a1b1",
+      "classification": "mistake",
+      "lossPercent": 19.3765460609336,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "b1"
+            }
+          ],
+          "bestNet": 300,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "g1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "rook",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "h6"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 4,
+              "square": "a1"
+            }
+          ],
+          "playedNet": -300,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "b1g1",
+      "classification": "mistake",
+      "lossPercent": 19.698503025095658,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "g1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "rook",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "h6"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 3,
+              "square": "a1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "d7"
+            }
+          ],
+          "bestNet": 180,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "b1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "d7"
+            }
+          ],
+          "playedNet": -420,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "a1b1",
+      "classification": "mistake",
+      "lossPercent": 16.939172104660404,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "b1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "d7"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "pawn",
+                "side": "red"
+              },
+              "ply": 4,
+              "square": "g3"
+            }
+          ],
+          "bestNet": 350,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "g1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "e5"
+            }
+          ],
+          "playedNet": -230,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "b1g1",
+      "classification": "mistake",
+      "lossPercent": 10.649783056513945,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "g1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "e5"
+            }
+          ],
+          "bestNet": 230,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "b1"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 3,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "g4"
+            }
+          ],
+          "playedNet": -70,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "a1b1",
+      "classification": "good",
+      "lossPercent": 0.0,
+      "reason": null
+    },
+    {
+      "bestMove": "g5g4",
+      "classification": "doubtful_move",
+      "lossPercent": 7.068651140923842,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "d7"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "pawn",
+                "side": "red"
+              },
+              "ply": 3,
+              "square": "i3"
+            }
+          ],
+          "bestNet": 250,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "e5"
+            }
+          ],
+          "playedNet": -70,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g4e5",
+      "classification": "doubtful_move",
+      "lossPercent": 8.114515967757875,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "e5"
+            }
+          ],
+          "bestNet": 70,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "g4"
+            }
+          ],
+          "playedNet": -230,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g5g4",
+      "classification": "doubtful_move",
+      "lossPercent": 8.32452378248149,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "g4"
+            }
+          ],
+          "bestNet": 230,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "e5"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "d7"
+            }
+          ],
+          "playedNet": -190,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g4e5",
+      "classification": "doubtful_move",
+      "lossPercent": 5.912654772663051,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "e5"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "d7"
+            }
+          ],
+          "bestNet": 190,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "g4"
+            }
+          ],
+          "playedNet": -230,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g5g4",
+      "classification": "inaccuracy",
+      "lossPercent": 4.034080542678907,
+      "reason": null
+    },
+    {
+      "bestMove": "g4e5",
+      "classification": "blunder",
+      "lossPercent": 24.794074619898826,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "e5"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "d7"
+            }
+          ],
+          "bestNet": 190,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "b1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "e5"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 4,
+              "square": "g1"
+            }
+          ],
+          "playedNet": -830,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "f1b1",
+      "classification": "blunder",
+      "lossPercent": 23.84755539387903,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "missed_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "b1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "e5"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 3,
+              "square": "g1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "advisor",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "d7"
+            }
+          ],
+          "bestNet": 710,
+          "mover": "black",
+          "playedCaptures": [],
+          "playedNet": 0,
+          "plies": 4,
+          "settled": true
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "e1d2",
+      "classification": "mistake",
+      "lossPercent": 12.753641296204265,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [],
+          "bestNet": 0,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "b1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "e5"
+            }
+          ],
+          "playedNet": -530,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "f1b1",
+      "classification": "mistake",
+      "lossPercent": 12.804524292548408,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "missed_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "b1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "e5"
+            }
+          ],
+          "bestNet": 530,
+          "mover": "black",
+          "playedCaptures": [],
+          "playedNet": 0,
+          "plies": 4,
+          "settled": true
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "e1d0",
+      "classification": "mistake",
+      "lossPercent": 17.89944472587308,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [],
+          "bestNet": 0,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "g4"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 4,
+              "square": "b1"
+            }
+          ],
+          "playedNet": -830,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g5g4",
+      "classification": "mistake",
+      "lossPercent": 16.729428083245228,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "position_type",
+        "material": null,
+        "moves": 0,
+        "position": {
+          "bestValue": -600,
+          "component": "material",
+          "mobilityAfter": 34,
+          "mobilityAfterBest": 35,
+          "mobilityBefore": 32,
+          "playedValue": -900
+        },
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "e1f2",
+      "classification": "blunder",
+      "lossPercent": 36.47658495171413,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "g4"
+            }
+          ],
+          "bestNet": -230,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "b1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "e4"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 4,
+              "square": "i1"
+            }
+          ],
+          "playedNet": -830,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "f1b1",
+      "classification": "blunder",
+      "lossPercent": 36.35150877727877,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "position_type",
+        "material": null,
+        "moves": 0,
+        "position": {
+          "bestValue": -300,
+          "component": "material",
+          "mobilityAfter": 35,
+          "mobilityAfterBest": 32,
+          "mobilityBefore": 33,
+          "playedValue": -900
+        },
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "e1f2",
+      "classification": "blunder",
+      "lossPercent": 20.11727788769507,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "horse",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "g4"
+            }
+          ],
+          "bestNet": -230,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "b1"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "pawn",
+                "side": "red"
+              },
+              "ply": 4,
+              "square": "e3"
+            }
+          ],
+          "playedNet": -670,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "f1b1",
+      "classification": "inaccuracy",
+      "lossPercent": 4.006756117270446,
+      "reason": null
+    },
+    {
+      "bestMove": "e1d2",
+      "classification": "blunder",
+      "lossPercent": 23.249755224353475,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "h4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "f1"
+            }
+          ],
+          "bestNet": -300,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "b1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "g4"
+            }
+          ],
+          "playedNet": -530,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "f1b1",
+      "classification": "blunder",
+      "lossPercent": 36.426932217938294,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "b1"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "i5"
+            }
+          ],
+          "bestNet": 460,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "i5"
+            }
+          ],
+          "playedNet": -140,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "h4g4",
+      "classification": "mistake",
+      "lossPercent": 17.869230939557802,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "g4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "i5"
+            }
+          ],
+          "bestNet": 140,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "e4"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "h4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "cannon",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "f6"
+            }
+          ],
+          "playedNet": -230,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g4h4",
+      "classification": "mistake",
+      "lossPercent": 18.625747683917822,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "position_type",
+        "material": null,
+        "moves": 0,
+        "position": {
+          "bestValue": -70,
+          "component": "material",
+          "mobilityAfter": 32,
+          "mobilityAfterBest": 37,
+          "mobilityBefore": 37,
+          "playedValue": -670
+        },
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "h4g4",
+      "classification": "blunder",
+      "lossPercent": 31.547630715822848,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "dropped_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 1,
+              "square": "g4"
+            },
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "cannon",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "b6"
+            }
+          ],
+          "bestNet": -230,
+          "mover": "red",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 2,
+              "square": "h4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 3,
+              "square": "i5"
+            }
+          ],
+          "playedNet": -530,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    },
+    {
+      "bestMove": "g4h4",
+      "classification": "blunder",
+      "lossPercent": 29.67547509187115,
+      "reason": {
+        "cannonMount": null,
+        "checkCapture": null,
+        "kind": "missed_material",
+        "material": {
+          "bestCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "rook",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "h4"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 2,
+              "square": "i5"
+            }
+          ],
+          "bestNet": 530,
+          "mover": "black",
+          "playedCaptures": [
+            {
+              "capturer": "black",
+              "piece": {
+                "kind": "pawn",
+                "side": "red"
+              },
+              "ply": 1,
+              "square": "g3"
+            },
+            {
+              "capturer": "red",
+              "piece": {
+                "kind": "pawn",
+                "side": "black"
+              },
+              "ply": 4,
+              "square": "i5"
+            }
+          ],
+          "playedNet": 0,
+          "plies": 4,
+          "settled": false
+        },
+        "moves": 0,
+        "position": null,
+        "protection": null
+      }
+    }
+  ],
+  "gameLevel": 4,
+  "moves": [
+    "c3c4",
+    "g6g5",
+    "h2g2",
+    "g9e7",
+    "h0i2",
+    "h9g7",
+    "i0h0",
+    "i9h9",
+    "h0h6",
+    "f9e8",
+    "b2b9",
+    "e6e5",
+    "h6h4",
+    "e8f9",
+    "g2b2",
+    "f9e8",
+    "c0a2",
+    "h7h8",
+    "b0d1",
+    "h8f8",
+    "h4d4",
+    "a9b9",
+    "b2b9",
+    "h9h6",
+    "i2g1",
+    "b7b8",
+    "d1f2",
+    "e8d7",
+    "a0a1",
+    "b8b0",
+    "d0e1",
+    "g7h5",
+    "d4d2",
+    "b0b1",
+    "b9b6",
+    "a6a5",
+    "f2g4",
+    "h6h9",
+    "a1b1",
+    "h9i9",
+    "d2c2",
+    "h5g7",
+    "c2h2",
+    "f8f1",
+    "h2h6",
+    "e9f9",
+    "g1h3",
+    "d7e8",
+    "h6h4",
+    "e5e4",
+    "h3i1",
+    "i6i5",
+    "i1g2",
+    "g5g4",
+    "i3i4",
+    "f1f6",
+    "e3e4",
+    "g7i6",
+    "b6b9",
+    "g4g3"
+  ],
+  "opening": "CCPD-opening-00000278-ply8"
+}

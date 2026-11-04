@@ -1,0 +1,26 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/xq-core",
+    "crates/xq-engine",
+    "crates/xq-review",
+    "crates/xq-uci",
+    "crates/xq-wasm",
+]
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+version = "0.1.0"
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+
+[profile.test]
+opt-level = 1
+debug-assertions = true
+overflow-checks = true
+
+[profile.release]
+lto = "fat"
+codegen-units = 1

@@ -1,0 +1,19 @@
+{
+  "schema": "future-opening-remaining-v1",
+  "status": "approved future M4/M5 strength-candidate protocol; review evidence only",
+  "population_size": 153,
+  "selection_executed": false,
+  "source_files_sha256": {
+    "eligible-population.jsonl": "5e5d3595f9f08ad9fc10fe791de31454e73c726501cdc0c33d2a7c31a777e86e",
+    "selected-50.jsonl": "09225f85a6b906aa66baa0aa095c4b4b88f7aa420e63cded286ab92988ddbcee",
+    "selected-50.tsv": "2052a3f47ad38b5b2d7dc72004ea21faccc62df8a3dfccb0ce0f86a2fdf4cf88",
+    "opening-selection-protocol.json": "15b7eb11d8bab5ed860d9ab93f96c2feee5863f2127e311eacc25db55cab0c64"
+  },
+  "excluded_old_selected_count": 50,
+  "identity_check": "opening_id + normalized position_key; FEN equality verified for all old selections",
+  "entries_file": "remaining-153.jsonl",
+  "entries_sha256": "2e429c377eebd47abad175d2ae726130cf2f2060b5fe0ce02bb458d7d46848ce",
+  "rule_approval": "User approved using a new, preselected 50-opening group for look 2; each look remains 200 games.",
+  "current_protocol_sha256": "8fb0181719eb9e9a0a4101114b8d0b32f25f4aea3e098d4992acf77d99d6f447",
+  "scope_clarification": "All not-yet-started strength-enhancing candidates, including new M4 combinations and M5; baseline and correctness-repair rules unchanged."
+}

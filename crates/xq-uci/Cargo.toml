@@ -1,0 +1,15 @@
+[package]
+name = "xq-uci"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+default-run = "xq-uci"
+
+[lints]
+workspace = true
+
+[dependencies]
+serde_json = "1"
+xq-core = { path = "../xq-core" }
+xq-engine = { path = "../xq-engine" }
+xq-review = { path = "../xq-review" }

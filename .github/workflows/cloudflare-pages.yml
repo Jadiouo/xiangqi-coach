@@ -1,0 +1,128 @@
+# Builds the web app (root base path "/") and deploys it to Cloudflare Pages with wrangler.
+#   push to main        -> production (the Pages project's production branch must be "main")
+#   push to other branch -> preview deployment (branch alias URL)
+# Does nothing (every job skipped, run stays green) until the user has stored these in GitHub;
+# the Pages project itself is created by the deploy job on the first run:
+#   secrets   CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID
+#   variable  CLOUDFLARE_PAGES_PROJECT
+# Setup steps: docs/DEPLOY-CLOUDFLARE.md. GitHub Pages (pages.yml) stays as it is.
+name: cloudflare-pages
+
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Secrets cannot be used in a job-level `if:`, so this job turns "are they set?" into an output.
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      enabled: ${{ steps.flag.outputs.enabled }}
+    steps:
+      - id: flag
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT: ${{ vars.CLOUDFLARE_PAGES_PROJECT }}
+        run: |
+          if [ -n "$TOKEN" ] && [ -n "$ACCOUNT" ] && [ -n "$PROJECT" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Cloudflare Pages is not configured (secret CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID or variable CLOUDFLARE_PAGES_PROJECT missing); build and deploy are skipped." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+  build:
+    needs: check
+    if: needs.check.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - run: cargo install wasm-bindgen-cli --version 0.2.126 --locked
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+        working-directory: web
+      - run: npm run build
+        working-directory: web
+        env:
+          VITE_BASE_PATH: /
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-dist
+          path: web/dist
+          if-no-files-found: error
+
+  deploy:
+    needs: [check, build]
+    if: needs.check.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: dist
+      # Branch names are free text; keep only [A-Za-z0-9-] before it goes into a command line.
+      # "main" stays "main", which is what makes the deployment a production one.
+      - id: branch
+        env:
+          REF_NAME: ${{ github.ref_name }}
+        run: echo "name=$(printf '%s' "$REF_NAME" | tr -c 'A-Za-z0-9-' '-' | cut -c1-60)" >> "$GITHUB_OUTPUT"
+      # Creates the Pages project (production branch "main") on the first run, so the user does not
+      # have to make it by hand. An existing project must already use "main" as its production branch,
+      # otherwise pushes to main would quietly become preview deployments. Any answer other than
+      # "exists" or "not found" stops the deploy; Cloudflare's error messages are printed (they never
+      # contain the token).
+      - name: Create Pages project if missing
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT: ${{ vars.CLOUDFLARE_PAGES_PROJECT }}
+        run: |
+          api="https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT/pages/projects"
+          get="$RUNNER_TEMP/cf-project.json"
+          post="$RUNNER_TEMP/cf-create.json"
+          status() { curl -s --max-time 30 -o "$get" -w '%{http_code}' -H "Authorization: Bearer $CF_TOKEN" "$api/$PROJECT"; }
+          errors() { jq -r '.errors[]? | "  Cloudflare: \(.code) \(.message)"' "$1" >&2 || true; }
+          code=$(status)
+          case "$code" in
+            200)
+              branch=$(jq -r '.result.production_branch' "$get")
+              if [ "$branch" != main ]; then
+                echo "Pages project $PROJECT exists but its production branch is '$branch', not 'main'; change it in the Cloudflare dashboard." >&2; exit 1
+              fi
+              echo "Pages project $PROJECT exists (production branch main)." ;;
+            404)
+              body=$(jq -n --arg name "$PROJECT" '{name: $name, production_branch: "main"}')
+              if curl -sS --max-time 30 --fail-with-body -o "$post" -X POST "$api" \
+                   -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" --data "$body"; then
+                echo "Created Pages project $PROJECT (production branch main)."
+                echo "Created Cloudflare Pages project \`$PROJECT\` with production branch \`main\`." >> "$GITHUB_STEP_SUMMARY"
+              elif [ "$(status)" = 200 ]; then
+                echo "Pages project $PROJECT was created by a concurrent run."
+              else
+                echo "Could not create Pages project $PROJECT." >&2; errors "$post"; exit 1
+              fi ;;
+            *) echo "Unexpected HTTP $code when looking up Pages project $PROJECT (check token permission and account ID)." >&2; errors "$get"; exit 1 ;;
+          esac
+      # wrangler-action v3.14.1 (cloudflare/wrangler-action, tag v3.14.1 = commit below)
+      - uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT }} --branch=${{ steps.branch.outputs.name }} --commit-hash=${{ github.sha }} --commit-dirty=true

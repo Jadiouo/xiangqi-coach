@@ -1,0 +1,9 @@
+/target/
+/web/node_modules/
+/.codex/inputs/
+/.codex/PROJECT_GOAL.md
+/web/dist/
+/tests/__pycache__/
+__pycache__/
+/web/public/wasm/
+/web/playwright-report/
